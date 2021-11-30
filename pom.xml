@@ -36,15 +36,15 @@
 
                         <password>${anypoint.password}</password>
 
-                       <environment>${env}</environment>
+                       <environment>${cloudhub.environment}</environment>
 
-                        <applicationName>${appname}</applicationName>
+                        <applicationName>${cloudhub.app}</applicationName>
 
-                        <businessGroup>${business}</businessGroup>
+                        <businessGroup>${cloudhub.bg}</businessGroup>
 
-                        <workerType>${vCore}</workerType>
+                        <workerType>${cloudhub.worker}</workerType>
 
-                       <workers>${workers}</workers>
+                       <workers>1</workers>
 
                         <objectStoreV2>true</objectStoreV2>
 </cloudHubDeployment>
