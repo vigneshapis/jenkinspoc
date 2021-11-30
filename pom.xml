@@ -28,18 +28,28 @@
 				<version>3.0.0</version>
 				<configuration>
 					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${mule.version}</muleVersion>
-						<!-- Deploy User Parameter -->
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
-						<!-- Environment Parameter -->
-						<environment>${cloudhub.environment}</environment>
-						<applicationName>${cloudhub.app}</applicationName>
-						<businessGroup>${cloudhub.bg}</businessGroup>
-						<workerType>${cloudhub.worker}</workerType>
-						<objectStoreV2>true</objectStoreV2>
-					</cloudHubDeployment>
+2
+                        <uri>https://anypoint.mulesoft.com</uri>
+3
+                        <muleVersion>${mule.version}</muleVersion>
+4
+                        <username>${anypoint.username}</username>
+5
+                        <password>${anypoint.password}</password>
+6
+                        <environment>${env}</environment>
+7
+                        <applicationName>${appname}</applicationName>
+8
+                        <businessGroup>${business}</businessGroup>
+9
+                        <workerType>${vCore}</workerType>
+10
+                        <workers>${workers}</workers>
+11
+                        <objectStoreV2>true</objectStoreV2>
+12
+</cloudHubDeployment>
 				</configuration>
 			</plugin>
 			<plugin>
