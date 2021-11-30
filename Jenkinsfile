@@ -27,7 +27,7 @@ pipeline {
         APP_NAME = '<DEV-API-NAME>'
       }
       steps {
-            bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="vignesh88" -Danypoint.password="@Wikki1235813" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
+            bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="vignesh88" -Danypoint.password="@Wikki1235813" -Dcloudhub.app="Jenkins-api" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
       }
     }
     
