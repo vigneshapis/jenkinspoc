@@ -27,29 +27,30 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.0.0</version>
 				<configuration>
-					<cloudHubDeployment>
-2
+					<cloudHubDeployment
                         <uri>https://anypoint.mulesoft.com</uri>
-3
+
                         <muleVersion>${mule.version}</muleVersion>
-4
+
                         <username>${anypoint.username}</username>
-5
+
                         <password>${anypoint.password}</password>
-6
-                        <environment>${env}</environment>
-7
+
+                       <environment>${env}</environment>
+
                         <applicationName>${appname}</applicationName>
-8
+
                         <businessGroup>${business}</businessGroup>
-9
+
                         <workerType>${vCore}</workerType>
-10
-                        <workers>${workers}</workers>
-11
+
+                       <workers>${workers}</workers>
+
                         <objectStoreV2>true</objectStoreV2>
-12
 </cloudHubDeployment>
+
+
+
 				</configuration>
 			</plugin>
 			<plugin>
