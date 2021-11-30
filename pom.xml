@@ -27,7 +27,7 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.0.0</version>
 				<configuration>
-					<cloudHubDeployment
+					<cloudHubDeployment>
                         <uri>https://anypoint.mulesoft.com</uri>
 
                         <muleVersion>${mule.version}</muleVersion>
