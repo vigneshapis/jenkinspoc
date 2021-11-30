@@ -5,7 +5,7 @@ pipeline {
     //adding a comment for the commit test
     DEPLOY_CREDS = credentials('deploy-anypoint-user')
     MULE_VERSION = '4.3.0'
-    BG = "<BUSINESS-GROUP>"
+    BG = "Apisero Inc"
     WORKER = "Micro"
   }
   stages {
@@ -30,17 +30,15 @@ pipeline {
             bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="vignesh88" -Danypoint.password="@Wikki1235813" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
       }
     }
- 
-   stage('Deploy Development') {
+    stage('Deploy Production') {
       environment {
-        ENVIRONMENT = 'Sandbox'
-        APP_NAME = '<DEV-API-NAME>'
+        ENVIRONMENT = 'Production'
+        APP_NAME = '<API-NAME>'
       }
       steps {
-            bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
+            bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="vignesh88" -Danypoint.password="@Wikki1235813" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
       }
     }
- 
   }
 
   tools {
